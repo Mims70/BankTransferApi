@@ -79,7 +79,7 @@ namespace PaymentAPI.Controllers
             return Ok(account);
         }
 
-       
+        [Authorize(Roles = "Admin")]
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteAccount(int id)
         {
